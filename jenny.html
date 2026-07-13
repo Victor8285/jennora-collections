@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jennora Collections | Style • Quality • Everyday Living</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:70px;
+
+height:70px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:38px;
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+transition:.3s;
+
+z-index:9999;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.15);
+
+background:#1ebe5d;
+
+}
+    .social-links{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.social-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:#333;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.social-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.social-card{
+
+font-size:20px;
+
+}
+
+.social-card h3{
+
+margin:15px 0;
+
+color:#e91e63;
+
+}
+
+#lightbox{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.85);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+#lightbox img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:15px;
+
+}
+
+#closeLightbox{
+
+position:absolute;
+
+top:20px;
+
+right:35px;
+
+font-size:50px;
+
+color:white;
+
+cursor:pointer;
+
+}
+.testimonials{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+.testimonial{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+.testimonial:hover{
+
+transform:translateY(-10px);
+
+}
+
+.testimonial h4{
+
+color:#FFD700;
+
+margin:20px 0;
+
+font-size:24px;
+
+}
+
+.testimonial span{
+
+color:#777;
+
+font-weight:600;
+
+}
+
+.cta{
+
+background:linear-gradient(135deg,#e91e63,#ff6fa8);
+
+color:white;
+
+text-align:center;
+
+padding:90px 20px;
+
+}
+
+.cta h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+font-size:18px;
+
+margin-bottom:35px;
+
+}
+
+#topBtn{
+
+position:fixed;
+
+bottom:100px;
+
+right:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#e91e63;
+
+color:white;
+
+font-size:24px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+transform:scale(1.1);
+
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fff8fb;
+color:#333;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(12px);
+box-shadow:0 4px 20px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#e91e63;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#e91e63;
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:120px 10% 80px;
+
+background:linear-gradient(135deg,#ffe8f3,#ffffff);
+
+}
+
+.hero-content{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:60px;
+
+align-items:center;
+
+width:100%;
+
+max-width:1200px;
+
+}
+
+.hero-text h1{
+
+font-size:60px;
+
+line-height:1.1;
+
+color:#d81b60;
+
+margin-bottom:20px;
+
+}
+
+.hero-text h2{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+color:#555;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:30px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:16px 36px;
+
+background:#e91e63;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.35s;
+
+box-shadow:0 10px 25px rgba(233,30,99,.3);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+background:#c2185b;
+
+}
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.circle{
+
+width:380px;
+
+height:380px;
+
+border-radius:50%;
+
+background:linear-gradient(45deg,#ff80ab,#f8bbd0);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:22px;
+
+color:white;
+
+font-weight:bold;
+
+text-align:center;
+
+padding:30px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+section{
+
+padding:100px 10%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:40px;
+
+color:#d81b60;
+
+margin-bottom:20px;
+
+}
+
+.section-sub{
+
+text-align:center;
+
+max-width:800px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:60px;
+
+}
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.feature{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.feature:hover{
+
+transform:translateY(-10px);
+
+}
+
+.feature span{
+
+font-size:45px;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+.feature h3{
+
+margin-bottom:15px;
+
+color:#e91e63;
+
+}
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.item{
+
+overflow:hidden;
+
+border-radius:20px;
+
+background:white;
+
+box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.item img{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+display:block;
+
+transition:.5s;
+
+}
+
+.item:hover img{
+
+transform:scale(1.08);
+
+}
+
+footer{
+
+background:#d81b60;
+
+color:white;
+
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.1);
+
+}
+@media(max-width:768px){
+
+.hero-text h1{
+
+font-size:42px;
+
+}
+
+.hero-text h2{
+
+font-size:24px;
+
+}
+
+.circle{
+
+width:280px;
+
+height:280px;
+
+font-size:18px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Jennora</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="https://wa.me/2349075956408" target="_blank">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<h1>Upgrade Your Style & Everyday Essentials</h1>
+
+<h2>Style • Quality • Everyday Living</h2>
+
+<p>
+
+Welcome to <strong>Jennora Collections</strong>, your trusted destination for trendy outfits, classy handbags, stylish waist bags, premium water bottles, tumblers, and household essentials.
+
+We believe everyone deserves quality products that are beautiful, practical, and affordable.
+
+Discover carefully selected items that add style, comfort, and convenience to your everyday life.
+
+</p>
+
+<a href="#gallery" class="btn">Explore Our Collection</a>
+
+</div>
+
+<div class="hero-image">
+
+<div class="circle">
+
+✨
+
+Beautiful Fashion
+
+&
+
+Everyday Essentials
+
+✨
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">
+
+Why Shop With Jennora?
+
+</h2>
+
+<p class="section-sub">
+
+From trendy outfits and classy handbags to waist bags, water bottles, tumblers, and household essentials—we've got everything you need in one place.
+
+Every item is carefully selected to offer the perfect balance of quality, affordability, and style.
+
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<span>💎</span>
+
+<h3>Premium Quality</h3>
+
+<p>
+
+Every product is chosen with quality in mind.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<span>💰</span>
+
+<h3>Affordable Prices</h3>
+
+<p>
+
+Great value without compromising on style.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<span>❤️</span>
+
+<h3>Customer Satisfaction</h3>
+
+<p>
+
+We are committed to providing an enjoyable shopping experience.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<span>🚚</span>
+
+<h3>Reliable Service</h3>
+
+<p>
+
+Fast responses and dependable customer support.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section id="gallery">
+
+<h2 class="section-title">Featured Collection</h2>
+
+<p class="section-sub">
+Explore our beautiful collection of fashion and everyday essentials.
+</p>
+
+<div class="gallery">
+
+<div class="item"><img src="images/product1.jpg" alt="Product 1"></div>
+
+<div class="item"><img src="images/product2.jpg" alt="Product 2"></div>
+
+<div class="item"><img src="images/product3.jpg" alt="Product 3"></div>
+
+<div class="item"><img src="images/product4.jpg" alt="Product 4"></div>
+
+<div class="item"><img src="images/product5.jpg" alt="Product 5"></div>
+
+<div class="item"><img src="images/product6.jpg" alt="Product 6"></div>
+
+<div class="item"><img src="images/product7.jpg" alt="Product 7"></div>
+
+<div class="item"><img src="images/product8.jpg" alt="Product 8"></div>
+
+<div class="item"><img src="images/product9.jpg" alt="Product 9"></div>
+
+</div>
+
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+
+<section id="services">
+
+<h2 class="section-title">Why Customers Love Jennora</h2>
+
+<div class="features">
+
+<div class="feature">
+<span>✨</span>
+<h3>Stylish Collections</h3>
+<p>Discover trendy fashion and carefully selected everyday essentials.</p>
+</div>
+
+<div class="feature">
+<span>💎</span>
+<h3>Premium Quality</h3>
+<p>Every item is chosen with quality, durability, and elegance in mind.</p>
+</div>
+
+<div class="feature">
+<span>💰</span>
+<h3>Affordable Prices</h3>
+<p>Great products at prices you'll love.</p>
+</div>
+
+<div class="feature">
+<span>🚚</span>
+<h3>Fast Delivery</h3>
+<p>Quick processing and reliable delivery service.</p>
+</div>
+
+<div class="feature">
+<span>❤️</span>
+<h3>Customer Satisfaction</h3>
+<p>Your happiness is our priority.</p>
+</div>
+
+<div class="feature">
+<span>🛍️</span>
+<h3>Everything in One Place</h3>
+<p>Fashion, accessories and household essentials all together.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+
+<section id="contact">
+
+<h2 class="section-title">Place Your Order</h2>
+
+<p class="section-sub">
+
+Ready to shop?
+
+Click the WhatsApp button.
+
+</p>
+
+<div style="text-align:center;">
+    <a href="https://wa.me/2349075956408" class="whatsapp" target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<a href="https://wa.me/2349075956408" class="btn" target="_blank">
+Order on WhatsApp
+</a>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+
+<footer>
+
+<h2>Jennora Collections</h2>
+
+<p>
+
+Style • Quality • Everyday Living
+
+</p>
+
+<br>
+
+<p>
+
+Fashion | Handbags | Waist Bags | Water Bottles | Tumblers | Household Essentials
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 Jennora Collections. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<a href="https://wa.me/9075956408" class="whatsapp">
+
+💬
+
+</a>
+<section id="testimonials">
+
+<h2 class="section-title">What Our Customers Say</h2>
+
+<p class="section-sub">
+Our customers are at the heart of everything we do.
+</p>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>"Excellent quality and very affordable. I love my handbag!"</p>
+<h4>★★★★★</h4>
+<span>- Happy Customer</span>
+</div>
+
+<div class="testimonial">
+<p>"Fast delivery and beautiful products. Highly recommended."</p>
+<h4>★★★★★</h4>
+<span>- Happy Customer</span>
+</div>
+
+<div class="testimonial">
+<p>"Jennora Collections never disappoints. Great customer service!"</p>
+<h4>★★★★★</h4>
+<span>- Happy Customer</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== CALL TO ACTION ===================== -->
+
+<section class="cta">
+
+<h2>Ready to Upgrade Your Style?</h2>
+
+<p>
+Order today and discover quality products you'll love.
+</p>
+
+<a  href="https://wa.me/2348012345678" class="btn" target="_blank">
+Order on WhatsApp
+</a>
+
+</section>
+
+<!-- Back To Top Button -->
+
+<button id="topBtn">⬆</button>
+<div id="lightbox">
+
+<span id="closeLightbox">&times;</span>
+
+<img id="lightboxImg" src="" alt="Preview">
+
+</div>
+
+<!-- ===================== FOLLOW US ===================== -->
+
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".feature,.item").forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(50px)";
+
+el.style.transition=".8s";
+
+observer.observe(el);
+
+});
+
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+
+if(document.documentElement.scrollTop > 300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+};
+
+topBtn.onclick = function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+const images = document.querySelectorAll(".item img");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightboxImg");
+
+const closeLightbox = document.getElementById("closeLightbox");
+
+images.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.style.display="flex";
+
+lightboxImg.src=img.src;
+
+});
+
+});
+
+closeLightbox.onclick=function(){
+
+lightbox.style.display="none";
+
+};
+
+lightbox.onclick=function(e){
+
+if(e.target===lightbox){
+
+lightbox.style.display="none";
+
+}
+
+};
+</script>
+</body>
